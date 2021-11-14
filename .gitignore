@@ -1,0 +1,7 @@
+/bin/
+/doc/
+*.class
+.DS_Store
+LinkedList.java
+Node.java
+TestLinkedList_original.java
