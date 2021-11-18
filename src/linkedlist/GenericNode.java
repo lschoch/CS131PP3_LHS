@@ -3,7 +3,7 @@ package linkedlist;
 /**
  * This class models a GenericNode object which contains data and a pointer to
  * the next generic node in the list. Each generic node has its internal data
- * stored as a parameterized type.
+ * stored as a parameterized type which is a placeholder for any type of object.
  * 
  * @author rkelley/njohnson/lschoch Programming Project 1 Start Project CS131ON
  */
