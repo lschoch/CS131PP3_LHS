@@ -1,6 +1,8 @@
 package main;
 
 import linkedlist.GenericNode;
+import linkedlist.LinkedList;
+import linkedlist.Node;
 import linkedlist.GenericLinkedList;
 
 /**
@@ -11,49 +13,67 @@ import linkedlist.GenericLinkedList;
 public class TestLinkedList {
 	
 	/**
-	 * The main method. Instantiates three lists and prints their data.
+	 * The main method. Instantiates four lists and prints their data.
 	 * 
 	 * @param args this method does not use command line arguments
 	 */
 	public static void main(String[] args) {
+		
+LinkedList myList=new LinkedList();
+		// This is the original TestLinkedList code
+		Node aNode=new Node();
+		aNode.setData("Element 1");
+		myList.addNode(aNode);
+		aNode = new Node();
+		aNode.setData("Element 2");
+		myList.addNode(aNode);
+		
+		// This is the code added by lschoch
+		Node tempnode=myList.getList();
+		do 
+		{
+			System.out.println(tempnode.getData());
+			tempnode=tempnode.getNextNode();
+		} while (tempnode!=null);
+		
 		// Create integerList
 		GenericLinkedList<Integer> integerList = new GenericLinkedList<Integer>();
 		// Create nodes for integerList
-		GenericNode<Integer> aNode = new GenericNode<Integer>();
-		aNode.setData(101);
-		integerList.addNode(aNode);
-		aNode = new GenericNode<Integer>();
-		aNode.setData(202);
-		integerList.addNode(aNode);
-		aNode = new GenericNode<Integer>();
-		aNode.setData(303);
-		integerList.addNode(aNode);
+		GenericNode<Integer> intNode = new GenericNode<Integer>();
+		intNode.setData(101);
+		integerList.addNode(intNode);
+		intNode = new GenericNode<Integer>();
+		intNode.setData(202);
+		integerList.addNode(intNode);
+		intNode = new GenericNode<Integer>();
+		intNode.setData(303);
+		integerList.addNode(intNode);
 
 		// Create doubleList
 		GenericLinkedList<Double> doubleList = new GenericLinkedList<Double>();
 		// Create nodes for doubleList
-		GenericNode<Double> bNode = new GenericNode<Double>();
-		bNode.setData(101.101);
-		doubleList.addNode(bNode);
-		bNode = new GenericNode<Double>();
-		bNode.setData(202.202);
-		doubleList.addNode(bNode);
-		bNode = new GenericNode<Double>();
-		bNode.setData(303.303);
-		doubleList.addNode(bNode);
+		GenericNode<Double> doubleNode = new GenericNode<Double>();
+		doubleNode.setData(101.101);
+		doubleList.addNode(doubleNode);
+		doubleNode = new GenericNode<Double>();
+		doubleNode.setData(202.202);
+		doubleList.addNode(doubleNode);
+		doubleNode = new GenericNode<Double>();
+		doubleNode.setData(303.303);
+		doubleList.addNode(doubleNode);
 
 		// Create stringList
 		GenericLinkedList<String> stringList = new GenericLinkedList<String>();
 		// Create nodes for stringList
-		GenericNode<String> cNode = new GenericNode<String>();
-		cNode.setData("A string.");
-		stringList.addNode(cNode);
-		cNode = new GenericNode<String>();
-		cNode.setData("Another string.");
-		stringList.addNode(cNode);
-		cNode = new GenericNode<String>();
-		cNode.setData("Last string.");
-		stringList.addNode(cNode);
+		GenericNode<String> stringNode = new GenericNode<String>();
+		stringNode.setData("A string.");
+		stringList.addNode(stringNode);
+		stringNode = new GenericNode<String>();
+		stringNode.setData("Another string.");
+		stringList.addNode(stringNode);
+		stringNode = new GenericNode<String>();
+		stringNode.setData("Last string.");
+		stringList.addNode(stringNode);
 
 		// Print the data in each list
 		System.out.println("\nintegerList:");
